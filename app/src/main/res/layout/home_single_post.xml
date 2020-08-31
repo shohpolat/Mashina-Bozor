@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/home_car_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/times"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Damas" />
+
+
+        <TextView
+            android:id="@+id/home_brand_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="marka: "
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/home_car_model"
+            app:layout_constraintTop_toBottomOf="@id/home_car_model" />
+
+        <TextView
+            android:id="@+id/home_car_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4A148C"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/home_brand_text"
+            app:layout_constraintTop_toTopOf="@id/home_brand_text"
+            tools:text="chevrolet" />
+
+
+        <TextView
+            android:id="@+id/home_car_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/timesbd"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="#0F49DC"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/home_brand_text"
+            app:layout_constraintLeft_toLeftOf="@id/guideline1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/home_car_brand"
+            tools:text="100.000.000 so'm" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <TextView
+            android:id="@+id/home_car_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@+id/home_car_brand"
+            tools:text="2015, yengil avtomobil, sedan, 75000 km, mexanik, oldi tortish, benzin" />
+
+
+        <TextView
+            android:id="@+id/home_has_less_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:fontFamily="@font/comicbd"
+            android:textColor="#23D516"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_car_details"
+            tools:text="kami bor" />
+
+
+        <TextView
+            android:id="@+id/home_postId_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e'lon raqami:"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_has_less_view" />
+
+        <LinearLayout
+            android:id="@+id/postId_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/postid_bg"
+            app:layout_constraintLeft_toRightOf="@id/home_postId_text"
+            app:layout_constraintTop_toBottomOf="@id/home_has_less_view">
+
+            <TextView
+                android:id="@+id/home_post_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000"
+                tools:text="12345678" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/seen_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/ic_eye"
+            app:layout_constraintBottom_toBottomOf="@+id/home_postId_text"
+            app:layout_constraintRight_toLeftOf="@id/home_views_count" />
+
+        <TextView
+            android:id="@+id/home_views_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/seen_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/seen_img"
+            tools:text="1234" />
+
+        <LinearLayout
+            android:id="@+id/img1_cover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/header_bg"
+            android:padding="2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/home_postId_text">
+
+            <ImageView
+                android:id="@+id/home_img1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/malibu_front" />
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+
+        <LinearLayout
+            android:id="@+id/img2_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/header_bg"
+            android:paddingTop="2dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@id/img3_cover"
+            app:layout_constraintLeft_toRightOf="@id/img1_cover"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img1_cover">
+
+            <ImageView
+                android:id="@+id/home_img2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/malibu2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/img3_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/header_bg"
+            android:paddingRight="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/img1_cover"
+            app:layout_constraintLeft_toRightOf="@id/img1_cover"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img2_cover">
+
+            <ImageView
+                android:id="@+id/home_img3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/malibu_back" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/images_count"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:alpha="0.5"
+            android:background="#000000"
+            android:clickable="false"
+            android:text="+8"
+            android:textColor="#FFDD00"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/img1_cover"
+            app:layout_constraintLeft_toLeftOf="@id/img1_cover" />
+
+        <TextView
+            android:id="@+id/post_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img1_cover"
+            tools:text="bugun" />
+
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:src="@drawable/ic_save"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img1_cover"
+            android:background="?selectableItemBackground"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

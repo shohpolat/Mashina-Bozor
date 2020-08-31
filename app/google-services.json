@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "918415744758",
+    "firebase_url": "https://mashina-bozor-ae05b.firebaseio.com",
+    "project_id": "mashina-bozor-ae05b",
+    "storage_bucket": "mashina-bozor-ae05b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918415744758:android:c31f4386e3dc5d0b8916d7",
+        "android_client_info": {
+          "package_name": "com.example.mashinabozor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918415744758-2m75habdc2jnf5cfqms92p85d6511590.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mashinabozor",
+            "certificate_hash": "fa14b8994df690278a60211e5dbe4af7a517239b"
+          }
+        },
+        {
+          "client_id": "918415744758-n4m1ehaf61v2tbqr6jutnf56k81nbnnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH15sf7xwspStxUWRWUL1hBRvwn64sZIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918415744758-n4m1ehaf61v2tbqr6jutnf56k81nbnnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

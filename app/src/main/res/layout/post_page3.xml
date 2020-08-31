@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Veiws.Post_Page3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/post3_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#32D8B1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/post3_back_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:src="@drawable/ic_back"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Mashina Sotish (3/3)"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:fontFamily="@font/comic"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/post_page3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/timesbd"
+            android:gravity="center"
+            android:text="Aloqaga chiqish uchun ma'lumotlarni kiriting:"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="viloyat"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/regions_spinner_cover" />
+
+        <LinearLayout
+            android:id="@+id/regions_spinner_cover"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/car_type_cover_bg"
+            app:layout_constraintTop_toBottomOf="@id/post_page3_text">
+
+
+            <Spinner
+                android:id="@+id/regions_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="tuman"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/districts_spinner_cover" />
+
+        <LinearLayout
+            android:id="@+id/districts_spinner_cover"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/car_type_cover_bg"
+            app:layout_constraintTop_toBottomOf="@id/regions_spinner_cover">
+
+
+            <Spinner
+                android:id="@+id/districts_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="aktiv telefon raqam"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/phone_number_cover" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_number_cover"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="+998 XX YYYYYYY"
+            app:layout_constraintTop_toBottomOf="@id/districts_spinner_cover">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/active_number_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sell_Btn_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#59FF00"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/phone_number_cover"
+            app:layout_constraintRight_toRightOf="@id/phone_number_cover"
+            app:layout_constraintTop_toBottomOf="@id/phone_number_cover">
+
+
+            <Button
+                android:id="@+id/sell_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="20dp"
+                android:text="sotuvga qo'yish" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

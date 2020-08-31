@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/nav_give_post"
+            android:icon="@drawable/elon"
+            android:title="E'lon Berish">
+
+        </item>
+        <item
+            android:id="@+id/my_posts"
+            android:icon="@drawable/my_posts"
+            android:title="Mening e'lonlarim">
+
+        </item>
+
+        <item
+            android:id="@+id/saved_posts"
+            android:icon="@drawable/ic_saved_black"
+            android:title="Saqlangan e'lonlar">
+
+        </item>
+
+        <item
+            android:id="@+id/nav_search_btn"
+            android:icon="@drawable/ic_search"
+            android:title="Qidirish">
+
+        </item>
+        <item
+            android:id="@+id/nav_refresh"
+            android:icon="@drawable/ic_refresh"
+            android:title="Yangilash">
+
+        </item>
+
+
+</menu>

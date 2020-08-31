@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C8123">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="10dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/which_category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qaysi kategoriya bo'yicha qidiruv olib borasiz?"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/search_rg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/which_category_text"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/by_postId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="1"
+                    android:text="e'lon raqami" />
+
+
+                <RadioButton
+                    android:id="@+id/by_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="2"
+                    android:text="mashina markasi" />
+
+
+                <RadioButton
+                    android:id="@+id/by_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="3"
+                    android:text="mashina modeli" />
+
+
+                <RadioButton
+                    android:id="@+id/by_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="4"
+                    android:text="narxi" />
+
+
+                <RadioButton
+                    android:id="@+id/by_regions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="5"
+                    android:text="viloyat,tuman" />
+
+
+                <RadioButton
+                    android:id="@+id/by_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="6"
+                    android:text="mashina turi(yengil,yuk)" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/downBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/down_bt_bg"
+            android:src="@drawable/ic_up"
+            app:layout_constraintBottom_toBottomOf="@id/relative"
+            app:layout_constraintLeft_toLeftOf="@id/relative"
+            app:layout_constraintRight_toRightOf="@id/relative"
+            app:layout_constraintTop_toBottomOf="@id/relative" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_tab_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/downBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/searchTab_progressBar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:indeterminateDrawable="@drawable/home_tab_progressbar"
+        android:indeterminateDuration="@android:integer/config_shortAnimTime"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+</FrameLayout>
